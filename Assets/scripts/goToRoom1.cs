@@ -5,6 +5,6 @@ public class goToRoom1 : MonoBehaviour
 {
     public void room1()
     {
-        SceneManager.LoadScene("room 1");
+        SceneManager.LoadScene("room1");
     }
 }

@@ -7,7 +7,7 @@ public class goToRoom2 : MonoBehaviour
     
         public void room2()
         {
-            SceneManager.LoadScene("room 2");
+            SceneManager.LoadScene("room2");
         }
     
 
