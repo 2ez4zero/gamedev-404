@@ -505,8 +505,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2049651016}
-        m_TargetAssemblyTypeName: goToRoom2, Assembly-CSharp
+      - m_Target: {fileID: 2049651017}
+        m_TargetAssemblyTypeName: GoTo, Assembly-CSharp
         m_MethodName: room2
         m_Mode: 1
         m_Arguments:
@@ -568,6 +568,7 @@ GameObject:
   - component: {fileID: 2049651013}
   - component: {fileID: 2049651012}
   - component: {fileID: 2049651016}
+  - component: {fileID: 2049651017}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -668,6 +669,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 198893a3f48512a4eb04a27dfabfca16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2049651017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049651011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5260f8a62ad1e5c4e890a359acf8256e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2144659563

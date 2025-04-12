@@ -32,6 +32,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/room3.unity
     guid: 66975ea9ec9400e4d98351520bfd72f3
+  - enabled: 1
+    path: Assets/Scenes/usapan.unity
+    guid: 3dc20ecfd30a08147b746ec5cf779327
+  - enabled: 1
+    path: Assets/Scenes/salaTour.unity
+    guid: bf9c095238300104995146bb68f524ac
+  - enabled: 1
+    path: Assets/Scenes/kitchenTour.unity
+    guid: 4f5e807f2b108764ea3b0179c3e116da
+  - enabled: 1
+    path: Assets/Scenes/mcRoomTour.unity
+    guid: eb84f3a5540e4634b912f6ed320d5089
+  - enabled: 1
+    path: Assets/Scenes/gabi.unity
+    guid: a1141469f696ff2478c37f38215c0db2
+  - enabled: 1
+    path: Assets/Scenes/salaDeadTenant.unity
+    guid: 3493e54efe4256f4eaac05f2359dbdbe
+  - enabled: 1
+    path: Assets/Scenes/salaDeadKenn.unity
+    guid: 7ebc3da538148714ba224e6d3738a9b3
+  - enabled: 1
+    path: Assets/Scenes/salaDeadCed.unity
+    guid: bb2631e9a4de768408b4b5146b6490e5
+  - enabled: 1
+    path: Assets/Scenes/salaDeadAsh.unity
+    guid: 53a19830805d10b4a95d56b292bb04f6
+  - enabled: 1
+    path: Assets/Scenes/salaDeadPlayer.unity
+    guid: facc5e87d327c884fbf8ceb932c55e15
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

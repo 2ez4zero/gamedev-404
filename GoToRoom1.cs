@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class goToRoom1 : MonoBehaviour
+public class GoToRoom1 : MonoBehaviour
 {
     public void room1()
     {
