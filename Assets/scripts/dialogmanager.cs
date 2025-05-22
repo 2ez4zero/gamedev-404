@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
 
     public float typingSpeed = 0.04f;
 
+    [Header("Optional Behavior")]
+    public bool showInventoryAfterDialogue = false; // ✅ Toggle this in Inspector
+
     private int currentLine = 0;
     private bool isTyping = false;
     private Coroutine typingCoroutine;
@@ -78,10 +81,18 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-
     void OnContinueClicked()
     {
-        // Do something after the dialogue ends (hide panel, change scene, etc.)
         Debug.Log("Dialogue finished!");
+
+        // ✅ Show inventory only if this dialogue should trigger it
+        if (showInventoryAfterDialogue && InventoryManager.instance != null)
+        {
+            InventoryManager.instance.ShowInventory();
+            Debug.Log("Inventory now shown.");
+        }
+
+        // 🔄 Optional: hide the dialogue UI
+        gameObject.SetActive(false); // Or disable the panel that holds the dialogue
     }
 }

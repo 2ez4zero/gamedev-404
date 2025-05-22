@@ -4,52 +4,35 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
-    public Animator transitionAnimator;
-    public float transitionTime = 1f; // Match this to your animation length
-    public string nextSceneName = "startGame"; // Make sure this matches your scene name
+    public static SceneTransitionManager Instance;
+    public Animator fadeAnimator;
+    public float fadeDuration = 1.0f;
 
-    void Start()
+    void Awake()
     {
-        // Play fade-in animation when the scene loads
-        if (transitionAnimator != null)
+        if (Instance == null)
         {
-            transitionAnimator.SetTrigger("start");
-            Debug.Log("Fade-in animation triggered.");
-        }
-    }
-
-    public void OnStartGameClicked()
-    {
-        if (!string.IsNullOrEmpty(nextSceneName))
-        {
-            Debug.Log("Starting scene transition...");
-            if (transitionAnimator != null)
-            {
-                StartCoroutine(LoadSceneWithFade(nextSceneName));
-            }
-            else
-            {
-                // Fallback: no animation
-                SceneManager.LoadScene(nextSceneName);
-            }
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Only for fade-out logic
         }
         else
         {
-            Debug.LogError("Next scene name is empty! Please assign it in the Inspector.");
+            Destroy(gameObject);
         }
     }
 
-    public IEnumerator LoadSceneWithFade(string sceneName)
+    // No fade-in logic needed here anymore
+
+    public void TransitionToScene(string sceneName)
     {
-        Debug.Log("Fade-out animation triggered.");
-        // Play fade-out animation
-        transitionAnimator.SetTrigger("end");
+        StartCoroutine(FadeAndLoadScene(sceneName));
+    }
 
-        // Wait for the animation to finish
-        yield return new WaitForSeconds(transitionTime);
-
-        Debug.Log($"Loading scene: {sceneName}");
-        // Load the scene
+    IEnumerator FadeAndLoadScene(string sceneName)
+    {
+        fadeAnimator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(fadeDuration);
         SceneManager.LoadScene(sceneName);
+        // Do NOT trigger fade in — it’s handled in the new scene itself
     }
 }
